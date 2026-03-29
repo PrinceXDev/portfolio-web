@@ -3,13 +3,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "@/lib/gsap";
 
-const stats = [
-  { value: "5+", label: "Years Experience" },
-  { value: "50+", label: "Projects Delivered" },
-  { value: "30+", label: "Happy Clients" },
-  { value: "∞", label: "Lines of Code" },
-];
-
 export function About() {
   const sectionRef = useRef<HTMLElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
@@ -110,26 +103,9 @@ export function About() {
             </p>
             <p className="leading-relaxed text-muted">
               When I&apos;m not coding, you&apos;ll find me exploring new
-              creative tools, contributing to open source, or sketching ideas for
-              the next project.
+              creative tools, sketching ideas for the next project.
             </p>
           </div>
-        </div>
-
-        <div
-          ref={statsRef}
-          className="mt-20 grid grid-cols-2 gap-8 border-t border-line pt-10 md:grid-cols-4"
-        >
-          {stats.map((stat) => (
-            <div key={stat.label} className="stat-item">
-              <span className="block font-display text-4xl font-extrabold text-accent md:text-5xl">
-                {stat.value}
-              </span>
-              <span className="mt-2 block font-mono text-xs uppercase tracking-widest text-dim">
-                {stat.label}
-              </span>
-            </div>
-          ))}
         </div>
       </div>
     </section>
